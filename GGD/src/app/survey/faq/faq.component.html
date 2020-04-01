@@ -1,0 +1,55 @@
+<div class="textFaq" (window:resize)="onResize()">
+  <h1 id="titelFaq">FAQ</h1>
+  <h2 class="questionFaq" id="Q1" *ngIf="!isMobile">Wat is de Gezonde Groenwijzer?</h2>
+  <p class="answerFaq" *ngIf="!isMobile">
+    De Gezonde Groenwijzer is een instrument dat is ontwikkeld door de GGD Amsterdam. Met dit instrument kunnen de wensen en behoeften van bewoners met betrekking tot de groene inrichting van hun buurt in beeld gebracht worden. Groen draagt stedelijke functies
+    en kan een positieve bijdrage leveren aan de gezondheid van mensen die in de stad wonen. Daarom is het belangrijk dat de wensen van bewoners en de groene inrichting goed op elkaar aansluiten, en dat mensen meer bewust worden van de voordelen die
+    groen kan bieden voor de gezondheid.
+  </p>
+  <h2 class="questionFaq" id="Q2" *ngIf="!isMobile">Hoe ziet de Gezonde Groenwijzer er uit?</h2>
+  <p class="answerFaq" *ngIf="!isMobile">
+    In de gezonde groenwijzer staan vijf aspecten van een gezonde groene omgeving. Bewoners vullen tien vragen in, waarmee zij het belang van elk onderdeel tegen elkaar afwegen. Dit levert een beeld op van welke onderdelen van het groen het meest belangrijk
+    worden gevonden.
+  </p>
+  <h2 class="questionFaq" id="Q3" *ngIf="!isMobile">Hoe zie ik de resultaten van mij en mijn buurt?</h2>
+  <p class="answerFaq" *ngIf="!isMobile">
+    Dit is te doen door op de home pagina op de knop "Overall Results" te klikken. Ook ziet u de resultaten na het invullen van de vragenlijst.
+  </p>
+  <h2 class="questionFaq" id="Q4" *ngIf="!isMobile">Hoe vaak kan ik de vragenlijst invullen?</h2>
+  <p class="answerFaq" *ngIf="!isMobile">
+    Per huishouden is het mogelijk de vragenlijst maar één keer in te vullen.
+  </p>
+
+  <div style="text-align: center;">
+  <label id="behulpzaamLabel" for="behulpzaam" style="margin: 10px">Was dit behulpzaam?: </label>
+
+  <select id="behulpzaam" #selectedValue style="margin-top: 50px">
+    <option value="Leeg">-</option>
+    <option value="Ja">Ja</option>
+    <option value="Nee">Nee</option>
+  </select>
+
+  <button id="buttonSubmit" style="margin-left: 10px" class="btn btn-primary" (click)="submitFeedback(selectedValue.options.selectedIndex)">Submit</button>
+  </div>
+
+  <img id="image" class="rounded" src="assets/Images/GGD-GROEN.jpg" alt="Logo" height="100px" style="margin-top: 100px; position: absolute">
+
+  <! –– here starts the mobile version of FAQ ––>
+
+  <h2 class="questionFaq" *ngIf="isMobile">testResponsive</h2>
+  <p class="answerFaq" *ngIf="isMobile">
+    testResponsive
+  </p>
+  <h2 class="questionFaq" *ngIf="isMobile">testResponsive</h2>
+  <p class="answerFaq" *ngIf="isMobile">
+    testResponsive
+  </p>
+  <h2 class="questionFaq" *ngIf="isMobile">testResponsive</h2>
+  <p class="answerFaq" *ngIf="isMobile">
+    testResponsive
+  </p>
+  <h2 class="questionFaq" *ngIf="isMobile">testResponsive</h2>
+  <p class="answerFaq" *ngIf="isMobile">
+    testResponsive
+  </p>
+</div>

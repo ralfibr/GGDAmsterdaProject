@@ -1,0 +1,39 @@
+.cdk-global-scrollblock{
+  padding-right: 300px;
+  padding-top: 200px;
+}
+.form-group row{
+  size: 200px;
+}
+.mat-button-toggle-checked{
+  bottom: 200px;
+  top: 300px;
+}
+.form-group{
+  bottom: 50px;
+  padding-bottom: 50px;
+  padding-top: 100px;
+  padding-left: 300px;
+
+}
+.col-sm-2 col-form-label{
+  color: #4CAF50;
+}
+.cdk-keyboard-focused{
+  color: green;
+
+}
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  padding-right: 50px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #4CAF50;
+}

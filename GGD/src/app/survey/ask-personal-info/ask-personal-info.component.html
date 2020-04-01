@@ -1,0 +1,41 @@
+<div class="d-flex justify-content-center">
+    <div class="content">
+        <p style="text-align: center;">
+            Hartelijk bedankt voor het invullen van de Gezonde Groenwijzer! Door uw mening kunnen wij een groener Amsterdam creëren. Vul hieronder uw persoonlijke gegevens in als u op de hoogte houden wilt worden van de meest recente ontwikkelingen rondom dit project
+            (Project: <u>{{ projectName }}</u>). Als u dit niet wilt, klik dan gerust op ‘Verder zonder informatie in te vullen’. Het is geheel vrijwillig!
+        </p>
+
+        <!-- form -->
+        <form #form="ngForm">
+            <label for="emailAdress">*Email:</label>
+            <input type="email" class="form-control email" name="emailAdress" ngModel required email placeholder="email@google.com" />
+
+            <label for="age">Leeftijd:</label>
+            <input type="*number" class="form-control other" name="age" ngModel pattern="0-9" minlength="1" maxLength="2" placeholder="Leeftijd" />
+
+            <label for="Postcode">Geslacht:</label>
+            <select class="form-control email" name="gender" ngModel>
+        <option value="" selected disabled hidden>Kies...</option>
+        <option value="man">Man</option>
+        <option value="vrouw">Vrouw</option>
+        <option value="anders">Anders</option>
+      </select>
+
+            <label for="postCode">Postcode:</label>
+            <input type="*number" class="form-control other" name="postal" ngModel pattern="0-9" maxlength="4" placeholder="1033 (Voer alleen de eerste vier getallen in.)" />
+
+            <!-- checkbox  -->
+            <div class="col-auto my-1" style="padding: 0;">
+                <div class="custom-control custom-checkbox mr-sm-2">
+                    <input type="checkbox" class="custom-control-input" id="continueBox" ngModel name="checkBox" value="false" />
+                    <label class="custom-control-label" for="continueBox">Verder zonder informatie in te vullen.</label>
+                </div>
+            </div>
+            <!-- buttons -->
+            <button class="btn btn-primary" (click)="additionalinfo(form)" [routerLink]="['/result']" [disabled]="(form.form.value.checkBox != true) && !(form.value.emailAdress != '')">
+        Naar resultaten
+      </button>
+            <button class="btn btn-primary" id="buttonNavigate" (click)=navigateToSurvey()>Terug</button>
+        </form>
+    </div>
+</div>

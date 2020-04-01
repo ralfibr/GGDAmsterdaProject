@@ -1,0 +1,28 @@
+<body class="mat-button-toggle-checked" >
+<div  class="form-group " Width="20px" Hight="400px">
+  <table class="table table-light">
+    <thead>
+    <tr>
+        <th scope="col">Project code</th>
+      <th scope="col">Project Naam</th>
+      <th scope="col">Stadsdeel</th>
+      <th scope="col">Oppervlakte van project</th>
+      <th scope="col">Begin datum</th>
+      <th scope="col">Eind datum</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let project of projects; let i = index"
+        (click)="onClick(project); setIndex(i)"
+        [ngClass]="{ 'selected': project == selectedItem }">
+      <td scope="row">{{ project.projectId }}</td>
+      <td>{{ project.name }}</td>
+      <td>{{project.location}} </td>
+      <td> {{project.size}}</td>
+      <td> {{project.beginDate}}</td>
+      <td>{{project.endDate}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>

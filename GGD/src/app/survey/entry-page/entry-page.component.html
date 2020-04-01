@@ -1,0 +1,13 @@
+<div class="d-flex justify-content-center">
+    <img id="image" class="rounded" src="assets/Img/amsterdam.jpg" alt="Amsterdam" height="250px">
+    <p id="description"> {{ textHome }} </p>
+</div>
+<form #formCode="ngForm">
+    <div class="d-flex justify-content-center">
+        <input id="inputField" #newCode type="number" placeholder="Uw inlog code" class="form-control form-control-lg">
+        <button id="submitButton" style="background-color: green" class="btn btn-primary" (click)="onCLickSubmit(newCode.value)">Submit</button>
+    </div>
+    <div class="d-flex justify-content-center">
+        <button id="buttonInstruction" routerLink="/stepbystep" class="btn btn-primary">Hoe werkt het?</button>
+    </div>
+</form>

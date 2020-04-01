@@ -1,0 +1,118 @@
+<!-- Mark van Manen & Danial Iqbal-->
+<!DOCTYPE html>
+<html>
+<!-- Danial Iqbal-->
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Icons</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  .w3-sidebar a {font-family: "Roboto", sans-serif}
+  body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+</style>
+
+<body class="mat-button-toggle-checked" >
+<h1 id="headerAdminOverzicht">Admin Overzicht </h1>
+<div  class="form-group " width="20px" height="400px">
+  <table class="table table-light">
+    <thead>
+    <tr>
+      <th scope="col">Code</th>
+      <th scope="col">Voornaam</th>
+      <th scope="col">Achternaam</th>
+      <th scope="col">Persoonlijk Werkmail</th>
+      <th scope="col">Persoonlijk Werknummer</th>
+      <th scope="col">Werkzaam Bij Vestiging</th>
+      <th scope="col">Vestiging Nummer</th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    <!-- Mark van Manen-->
+    <tr *ngFor="let user of users ; let i = index"
+        (click)="onClick(user); setIndex(i)"
+        [ngClass]="{ 'selected': user == selectedItem }">
+      <td scope="row">{{ user.id }}</td>
+      <td> {{user.voornaam}}</td>
+      <td> {{user.achternaam}}</td>
+      <td>{{user.email}} </td>
+      <td>{{user.telefoon}}</td>
+      <td> {{user.stadDeel}}</td>
+      <td> {{user.stadDeelNummer}}</td>
+    </tr>
+
+    </tbody>
+  </table>
+
+  <!-- Danial Iqbal-->
+  <button type="button " (click)="addAdminScreenDisplay()" class="btn btn-primary" style="display: none; background-color: green" href="#actualPopUp">Een nieuwe admin toevoegen.</button>
+  <button type="button " (click)="updateAdminScreenDisplay()" class="btn btn-primary" style="background-color: orangered">Een bestaande admin zijn gegevens wijzigen.</button>
+
+  <!-- Mark van Manen & Danial Iqbal-->
+  <button type="button" style="background-color: red"  (click)="deleteUser(selectedItem.email, selectedItem.voornaam, selectedItem.id)">Een bestaande admin verwijderen.</button>
+
+      <div class="addAdmin" *ngIf="showAddAdminScreen">
+    <br><br>
+        <h2>Voeg een nieuwe admin toe!</h2>
+        <strong style="padding-left: 2px">Beschikbare Werknemers:</strong>
+        <form>
+          <input list="werknemers" name="browser">
+          <datalist id="werknemers" >
+            <option *ngFor="let employee of employees ; let i = index">{{employee.voornaam}} {{employee.achternaam}}
+          </datalist>
+          <input type="submit" value="Maak Admin!">
+        </form>
+      </div>
+
+  <div class="updateAdmin" *ngIf="showUpdateAdminScreen">
+    <br><br>
+
+
+      <form>
+      Voornaam:<br>
+      <input type="text" name="firstname" [(ngModel)]="selectedItem.voornaam">
+      <br>
+      Achternaam:<br>
+      <input type="text" name="lastname" [(ngModel)]="selectedItem.achternaam">
+        Persoonlijk Werkmail:<br>
+        <input type="text" name="workmail" [(ngModel)]="selectedItem.email">
+        Persoonlijk Werknummer:<br>
+        <input type="text" name="worknumber" [(ngModel)]="selectedItem.telefoon">
+        Werkzaam Bij Vestiging:<br>
+          <select id="districtForm" [(ngModel)]="selectedItem.stadDeel" name="browser" >
+            <option value="Centrum">Centrum</option>
+            <option value="Nieuw-West">Nieuw-West</option>
+            <option value="Noord">Noord</option>
+            <option value="Oost">Oost</option>
+            <option value="West">West</option>
+            <option value="Zuid">Zuid</option>
+            <option value="Zuid-Oost">Zuid-Oost</option>
+          </select>
+        <br><br>Vestiging Nummer:<br>
+        <input type="text" name="districtnumber" [(ngModel)]="selectedItem.stadDeelNummer">
+
+        <input id="test" type="submit" value="Pas Wijzigingen Toe!" (click)="save()">
+
+      </form>
+
+  </div>
+
+</div>
+
+</body>

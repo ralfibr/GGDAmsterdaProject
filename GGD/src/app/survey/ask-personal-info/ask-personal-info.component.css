@@ -1,0 +1,31 @@
+.btn {
+    background-color: green;
+    margin: 5px;
+}
+
+.content {
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 3%;
+}
+
+input,
+select {
+    margin: 0 0 10px 0;
+}
+
+label {
+    margin: 0;
+}
+
+.email.ng-valid.ng-touched {
+    border: 1px solid green;
+}
+.email.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+.other.ng-invalid.ng-touched {
+  border: 1px solid green;
+}

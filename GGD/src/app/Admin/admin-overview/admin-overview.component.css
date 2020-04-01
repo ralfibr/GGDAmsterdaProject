@@ -1,0 +1,50 @@
+.mat-app-background{
+  color: #05a55a;
+  background-color: #4CAF50;
+}
+.w3-sidebar w3-bar-block w3-white w3-collapse w3-top{
+  color: #4CAF50 ;
+  background-color: #4CAF50;
+}
+.navbar-nav {
+  flex-direction: row;
+}
+.nav-item{
+  right: inherit;
+}
+
+.nav-link {
+  padding-top: 2px;
+  padding-right: 20px;
+  padding-left: 130px;
+  color: #4CAF50;
+}
+.navbar-nav1{
+  position: fixed;
+  left: 1200px;
+  top: 10px;
+}
+.mat-dialog-title{
+  color: red;
+  caret-color: #4CAF50;
+}
+.w3-bar-item w3-button{
+
+}
+.form-control form-control-dark w-100{
+  padding-top: 5px;
+  padding-right: 600px;
+  padding-left: 60px;
+}
+.form-control{
+  position: center;
+  left: 250px;
+  top: 10px;
+  color: #888888;
+  border-top: #4CAF50;
+  border-bottom: #4CAF50;
+}
+.table table-dark{
+  color: #3e8e41;
+  background-color: #3e8e41;
+}

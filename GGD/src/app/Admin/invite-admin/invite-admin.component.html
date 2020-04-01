@@ -1,0 +1,14 @@
+<body class="mat-button-toggle-checked" >
+<div class="form-group " Width="20px" Hight="400px">
+  <label  class="cdk-keyboard-focused">Uitnodigingslink </label>
+  <div class="cdk-keyboard-focused">
+    <input type="d" class="form-control" #userinput value="{{link}}"  >
+    <label class="mat-slider-thumb-label-text" >Druk op de onderstaande knop om de link te kopiëren</label>
+  </div>
+  <div class="mat-button">
+    <button class="cancelbtn" (click)="copyInputMessage(userinput)" value="Kop" >kopieer de link naar klembord</button>
+
+  </div>
+</div>
+
+</body>

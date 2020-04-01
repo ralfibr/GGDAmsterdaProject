@@ -1,0 +1,11 @@
+<body class="mat-button-toggle-checked" >
+<div class="form-group " Width="20px" Hight="400px">
+  <div class="qrCode">
+    <h1 class="titleQR">{{title}}</h1>
+    <input class="urlQR" type="text" placeholder="Enter url to generate QR Code" [(ngModel)]="qrcodename"><br>
+    <button class="buttonQR" (click)="generateQRCode()">{{buttonTitleGenerate}}</button>
+    <ngx-qrcode *ngIf="display" id="qrCodeImage" [qrc-value] = "value">
+    </ngx-qrcode><br>
+    <a class="buttonQR" [href]="href" *ngIf="display" (click)="downloadImage()" download>{{buttonTitleDownload}}</a>
+  </div>
+</div>

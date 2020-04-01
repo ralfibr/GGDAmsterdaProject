@@ -1,0 +1,17 @@
+<div>
+  <div>
+    <h1 mat-dialog-title>Project {{data.name}}</h1>
+    <div mat-dialog-content>
+      <p>Project code: {{data.projectId}}</p>
+      <p>Oppervlakte van dit project: {{data.size}}</p>
+      <p>Begin datum: {{data.beginDate}}</p>
+      <p>Eind datum: {{data.endDate}}</p>
+      <p>Beschrijving: "{{data.description}}"</p>
+    </div>
+  </div>
+  <div>
+    <button class="btn btn-primary" (click)="toggleEditMode()">Edit</button>
+    <button class="btn btn-primary" (click)="onNoClick()">Sluiten</button>
+    <button class="btn btn-primary" (click)="downloadExcel()">Download excel</button>
+  </div>
+</div>

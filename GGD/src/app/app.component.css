@@ -1,0 +1,17 @@
+.navbar {
+    margin: 20 0 20 20;
+}
+
+#currentLogo {
+    height: 105px;
+    padding-top: 15px;
+    padding-left: 25px;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+img:focus {
+    outline: none;
+}

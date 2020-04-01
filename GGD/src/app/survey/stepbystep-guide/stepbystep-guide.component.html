@@ -1,0 +1,80 @@
+<h1 id="mainHeaderOfPage">Hoe werkt het?</h1>
+
+<h2 class="headersOfParagraph">Introductie</h2>
+<p class="paragraphContent">
+  Welkom bij de Gezonde Groenwijzer. Door het invullen van de gezonde groenwijzer laat u ons weten wat u belangrijk vindt aan het groen bij u in de buurt. Dit kan via twee manieren: via het scannen van een QR-code of het invoeren van een numeriek nummer. Meer informatie over beiden methoden kun je hieronder vinden.
+  In de groenwijzer staan vijf gebruikswaarden van het groen. Dit zijn: 1) Rust & Ontspanning, 2) Bewegen, 3) Ontmoeten, 4) Tuinieren en 5) Natuur beleven. Welke gebruikswaarden vindt u het meest belangrijk voor het groen bij u in de buurt?
+  De Gezonde Groenwijzer bestaat uit 10 vragen. Bij elke vraag maakt u een vergelijking tussen de verschillende gebruikswaarden van het groen. Na het invullen ziet u uw persoonlijke score, en score van de buurt.
+  Helpt u mee door te laten weten wat voor u belangrijke gebruikswaarden van het groen zijn? <strong>Samen maken wij Amsterdam groen.</strong>
+</p>
+<p class="paragraphContent"><strong>Heeft u verder vragen? Klik dan op de onderstaande knop.</strong></p>
+<button id="faq" routerLink="/faq" class="btn btn-primary">Vragen & Antwoorden</button>
+
+
+
+<h2 class="headersOfParagraph">Hoe ben je op deze pagina gekomen?</h2>
+<button type="button " class="btn btn-primary" id="qr" (click)="qrCodeDisplay()">Ik heb een QR-code gescand.</button>
+<button type="button " class="btn btn-primary" id="numeric" (click)="numericDisplay()">Ik heb een numerieke code ingevoerd.</button>
+
+
+<h2 class="headersOfParagraph">Uitleg {{this.chosenOption}}</h2>
+
+<div *ngIf="showQrCodeExplaination" id="DoeMee" class="allSteps">
+
+  <div class="firstStep">
+    <img id="pictureStep1" src="assets/Images/Step1_User.jpg">
+    <h2> Scan de QR-Code </h2>
+    <p> Scan de QR-code om gebruik te maken van onze enquete. Richt jouw smartphone camera op de QR-code en neem deel aan onze nieuwe enquete.</p>
+  </div>
+  <div>
+    <img id="pictureStep2" src="assets/Images/Step2_User.jpg">
+    <h2> Vul onze enquete in </h2>
+    <p> Vul onze enquete in aan de hand van je mening. We hebben tien vragen opgesteld om bewuster te worden naar de wensen van onze bewoners.</p>
+  </div>
+  <div>
+    <img id="pictureStep3" src="assets/Images/Step3_User.jpg">
+    <h2> Bekijk de resultaten </h2>
+    <p> Bekijk de resultaten van jouw enquete en het gemiddelde van de buurt. Zo krijg je een mooi grafisch overzicht waar de buurt aan toe is!</p>
+  </div>
+  <div>
+    <img id="pictureStep4" src="assets/Images/Step4_User.png">
+    <h2> Groen Amsterdam </h2>
+    <p> Door het deelnemen aan deze enquete draag je bij aan een groen Amsterdam. Wij gebruiken de resultaten voor het aanleggen van groen. </p>
+  </div>
+</div>
+
+
+<div *ngIf="showNumericExplaination"  class="allSteps">
+
+  <div class="firstStep">
+    <img id="pictureStep1" src="assets/Images/Step1b_User.jpg">
+    <h2> Voer de code in </h2>
+    <p> Voer jouw numerieke code in bij het input veld. Na het invoeren van de code wordt je direct doorverwezen naar de nieuwste enquete.</p>
+  </div>
+  <div>
+    <img id="pictureStep2" src="assets/Images/Step2_User.jpg">
+    <h2> Vul onze enquete in </h2>
+    <p> Vul onze enquete in aan de hand van je mening. We hebben tien vragen opgesteld om bewuster te worden naar de wensen van onze bewoners.</p>
+  </div>
+  <div>
+    <img id="pictureStep3" src="assets/Images/Step3_User.jpg">
+    <h2> Bekijk de resultaten </h2>
+    <p> Bekijk de resultaten van jouw enquete en het gemiddelde van de buurt. Zo krijg je een mooi grafisch overzicht waar de buurt aan toe is!</p>
+  </div>
+  <div>
+    <img id="pictureStep4" src="assets/Images/Step4_User.png">
+    <h2> Groen Amsterdam </h2>
+    <p> Door het deelnemen aan deze enquete draag je bij aan een groen Amsterdam. Wij gebruiken de resultaten voor het aanleggen van groen. </p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

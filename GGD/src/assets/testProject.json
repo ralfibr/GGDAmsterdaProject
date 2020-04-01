@@ -1,0 +1,57 @@
+{
+    "projects":[
+        {
+            "Code": 50,
+            "Name": "Jordaan",
+            "Location": "Jordaan",
+            "imgResource": "assets/Img/jordaan.jpg",
+            "description": "De Jordaan is mogelijk de meest bekende en romantische buurt van Amsterdam. Vroeger een typische volksbuurt met een kleurrijk verleden, nu razend populair bij bezoeker en inwoner door de pittoreske grachten, kleine winkeltjes en knusse straten en stegen.",
+            "size": 5,
+            "beginDate": "Nu",
+            "endDate": "Toekomst"
+
+        },
+        {
+            "Code": 51,
+            "Name": "De Pijp",
+            "Location": "De Pijp",
+            "imgResource": "assets/Img/dePijp.jpg",
+            "description": "Het Quartier Latin van Amsterdam, met zijn rechte lange straten en goedkope arbeiderswoningen, heeft een roemrucht verleden van theatertjes, horeca, kleinschalige bedrijvigheid en verschillende culturen. Het nieuwere gedeelte valt op door een sensationele concentratie van Amsterdamse Schoolbouw en door charmante laagbouw in neorenaissancestijl: de huisjes voor de diamantslijpers van weleer.",
+            "size": 10,
+            "beginDate": "Nu",
+            "endDate": "Toekomst"
+
+        },
+        {
+            "Code": 52,
+            "Name": "Oud-Zuid",
+            "Location": "Oud-Zuid",
+            "imgResource": "assets/Img/oudZuid.jpg",
+            "description": "Oud-Zuid is een van Amsterdams mooiste en rijkste buurten, met indrukwekkende, brede lanen, imposante monumentale gebouwen, bijzondere boetieks en een aantal van de beste musea ter wereld. Van het culturele Museumplein, tot het levendige Vondelpark en de serene lanen langs de Willemsparkweg, de buurt straalt in al zijn glorie.",
+            "size": 70,
+            "beginDate": "Nu",
+            "endDate": "Toekomst"
+
+        },{
+            "Code": 53,
+            "Name": "Bijlmer",
+            "Location": "Bijlmer",
+            "imgResource": "assets/Img/bijlmer.jpg",
+            "description": "\nAmsterdam is een stad die nooit lijkt stil te staan, maar in de Bijlmer swingt het echt altijd. In Zuidoost wonen mensen met wortels over de hele wereld: maar liefst 130 verschillende nationaliteiten. Al die culturen bij elkaar in één buurt zorgt ervoor dat Zuidoost een eigen stad met eigen verhalen is geworden. En dat voel je.",
+            "size": 30,
+            "beginDate": "Nu",
+            "endDate": "Toekomst"
+
+        },{
+            "Code": 54,
+            "Name": "Voolbeeld Project",
+            "Location": "Amsterdam Zuidoost (E-buurt)",
+            "imgResource": "assets/Img/bijlmer.jpg",
+            "description": "\nAfgelopen jaren is er veel gebouwd in de E-buurt. Er kwamen nieuwe woningen, straten, groen en speelplekken. Binnenkort zal ook speellocatie Emerald opnieuw worden ingericht. Er komt meer ruimte voor groen maar het is nog niet besloten welk type groen. De gemeente Amsterdam vraagt u als bewoner om uw mening te geven voordat speelplek Emerald op de schop gaat. Zo kan er in het ontwerp rekening gehouden worden met de wensen van bewoners rondom Emerald. Door de Gezonde Groenwijzer in te vullen kunt u samen met uw buurt het projectteam helpen bij de herinrichting. \n Op 15 februari 2020 zal een buurtbijeenkomst georganiseerd worden voor de volgende straten: Egoli, Elberveld, Enkeldoorn, Edenburg, Eerstegeluk, Eksteenfontein en Eversdal. De uitkomst van de Gezonde Groenwijzer zal dan besproken worden. Kunt u hier niet bij aanwezig zijn? Dan kunt u de resultaten van de Gezonde Groenwijzer online bekijken. Ook als u wel bij de bijeenkomst aanwezig kunt zijn is kunt u de resultaten vooraf online zien.",
+            "size": 30,
+            "beginDate": "Nu",
+            "endDate": "Toekomst"
+
+        }
+    ]
+}

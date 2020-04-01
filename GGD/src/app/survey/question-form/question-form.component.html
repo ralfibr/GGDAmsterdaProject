@@ -1,0 +1,51 @@
+<!-- Danial Iqbal-->
+<div class="mainHeader">
+  <h1>WAAR GAAT JOUW VOORKEUR NAAR TOE?</h1>
+</div>
+
+<div class="entityOne">
+  <p>{{allSubjects[currentIndexToShow][0]}}</p>
+</div>
+
+<div class="entityTwo">
+  <p>{{allSubjects[currentIndexToShow][1]}}</p>
+</div>
+
+<br><br><br><br><br>
+
+<img id="pictureOne" src="{{images[currentIndexToShow].imgResource}}">
+<img id="pictureTwo" src="{{images[10 + currentIndexToShow].imgResource}}">
+
+
+<div flex layout="column" class="allignedChoises">
+  <div class="options">
+    <div class="d-flex justify-content-between">
+      <div id="allOptions" *ngFor="let singleChoise of allChoises">
+        <p id="singleChoise">{{singleChoise}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Frontend:implemented by Danial Iqbal && Backend: implemented by Teun Stout -->
+<div class="preferenceMeter">
+  <mat-slider id="specificSlider" min="-8" max="8" step="4" tickInterval="4" value="0" (input)="updateValue($event)"></mat-slider>
+</div>
+
+<!-- Danial Iqbal -->
+<div class="popUpButton">
+  <button mat-raised-button (click)="openDialog()">?</button>
+</div>
+
+<div *ngIf="showPreviousQuestionButton" class="previousButton">
+  <button class="btn btn-primary" id="specificPreviousButton" (click)="previousButtonClick()">Vorige Vraag</button>
+</div>
+
+<div *ngIf="showNextQuestionButton" class="nextButton">
+  <button class="btn btn-primary" id="specificNextButton" (click)="nextButtonClick()">Volgende Vraag</button>
+</div>
+
+<div *ngIf="showSumbitButton" class="sumbitButton">
+  <button class="btn btn-primary" id="specificSumbitButton" (click)="SendMatrix()" [routerLink]="['/ask']" routerLinkActive="router-link-active">Inleveren!</button>
+</div>
+

@@ -1,0 +1,29 @@
+<body class="mat-button-toggle-checked" >
+  <div  class="form-group " Width="20px" Hight="400px">
+    <table class="table table-light">
+      <thead>
+      <tr>
+        <th scope="col">Voornaam</th>
+        <th scope="col">Achternaam</th>
+        <th scope="col">Email</th>
+        <th scope="col">Telefoon</th>
+        <th scope="col">Functie</th>
+        <th scope="col">Stadsdeel</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let employee of employees ; let i = index"
+          (click)="onClick(employee); setIndex(i)"
+          [ngClass]="{ 'selected': employee == selectedItem }">
+        <td scope="row">{{ employee.voornaam }}</td>
+        <td> {{employee.achternaam}}</td>
+        <td>{{employee.email}} </td>
+        <td>{{employee.telefoon}}</td>
+        <td> {{employee.functie}}</td>
+        <td> {{employee.stadDeel}}</td>
+      </tr>
+      </tbody>
+    </table>
+    <app-employee-detail *ngIf="selectedItem"  [selectedEmployee]="selectedItem" [employeeIndex]="selectedRow" ></app-employee-detail>
+  </div>
+  </body>

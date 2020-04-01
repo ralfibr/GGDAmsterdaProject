@@ -1,0 +1,49 @@
+<div class="container">
+
+  </div>
+
+  <form style="width: 80%">
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Voornaam</label>
+      <input type="text" class="form-control"  id="exampleFormControlInput1"  [(ngModel)]="selectedEmployee.voornaam" name="tag" >
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Achternaam</label>
+      <input type="" class="form-control" id="locationInput1" [(ngModel)]="selectedEmployee.achternaam" name="Voornaam">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Email</label>
+      <input type="" class="form-control" id="MileageInput1" [(ngModel)]="selectedEmployee.email" name="achternaam" >
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Telefoon</label>
+      <input type="" class="form-control" id="telefoon" [(ngModel)]="selectedEmployee.telefoon" name="telefoon" >
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Functie</label>
+      <input type="" class="form-control" id="functie"  [(ngModel)]="selectedEmployee.functie"name="functie">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1"> Stadsdeel </label>
+      <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]="selectedEmployee.stadDeel" name="stadDeel" >
+         <option value="Centrum">Centrum</option>
+        <option value="Nieuw-West">Nieuw-West</option>
+        <option value="Noord">Noord</option>
+        <option value="Oost">Oost</option>
+        <option value="West">West</option>
+        <option value="Zuid">Zuid</option>
+        <option value="Zuid-Oost">Zuid-Oost</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <button type="removeb" class="removeb"   (click)="deleteEmployee(selectedEmployee.id, selectedEmployee.voornaam)">Verwijderen</button>
+
+      <button type="button" class="btn btn-outline-primary "   [disabled]=""  (click)="save()" >Opslaan</button>
+
+      <button type="button" class="btn btn-outline-primary " style="background-color: #4ec7f3"   (click)="createAdmin(selectedEmployee.id)">Maak admin</button>
+    </div>
+  </form>
+
+
+
+

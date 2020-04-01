@@ -1,0 +1,49 @@
+#titelFaq {
+    color: #05a55a;
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.questionFaq {
+    font-size: 25px;
+    color: #ff060d;
+    margin: auto;
+    width: 50%;
+    padding: 5px;
+}
+
+.answerFaq {
+    margin: auto;
+    width: 50%;
+    padding: 5px;
+}
+
+.textFaq {
+    position: relative;
+    -webkit-animation-name: testSlide;
+    -webkit-animation-duration: 1s;
+    animation-name: testSlide;
+    animation-duration: 1s;
+}
+
+@-webkit-keyframes testSlide {
+    from {
+        left: 100px;
+        top: 0px;
+    }
+    to {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+@keyframes testSlide {
+    from {
+        left: 100px;
+        top: 0px;
+    }
+    to {
+        left: 0px;
+        top: 0px;
+    }
+}

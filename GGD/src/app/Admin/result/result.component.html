@@ -1,0 +1,18 @@
+<body class="mat-button-toggle-checked">
+<h1 style="text-align: center;">Resultaten</h1>
+<div class="d-flex justify-content-center">
+  <div class="d-inline-flex p-2 bd-highlight size">
+    <canvas baseChart [datasets]=" barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+            [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType" [colors]="chartColors">
+    </canvas>
+  </div>
+</div>
+<div>
+  <div class="form-check">
+    <input style="margin-left: 300px;" type="*number" class="mat-button-toggle-checked" [(ngModel)]="inputproject"
+           value="projectCode" maxlength=100/>
+    <label>Vul project code in</label>
+    <button class="mat-button-toggle-checked" (click)="setProjectForBarchart()">chart updaten</button>
+  </div>
+</div>
+</body>

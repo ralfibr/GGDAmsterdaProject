@@ -1,0 +1,9 @@
+.size {
+   width: 55%;
+ }
+
+button {
+  background-color: green;
+  float: right;
+  margin-right: 50px;
+}

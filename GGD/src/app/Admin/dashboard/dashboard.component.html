@@ -1,0 +1,72 @@
+<body class="mat-dialog-title" >
+<form>
+  <div  class="form-group " Width="20px" Hight="400px">
+    <header class="w3-container" style="padding-top:22px">
+      <h2>Welkom {{service.getUserName()}}</h2>
+      <h5><b><i class="fa fa-dashboard"></i> Mijn Dashboard</b></h5>
+    </header>
+
+    <div class="w3-row-padding w3-margin-bottom">
+      <div class="w3-quarter">
+        <div class="w3-container w3-red w3-padding-16">
+          <div class="w3-left"><i class="fa fa-comment w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3></h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Resultaten</h4>
+        </div>
+      </div>
+      <div class="w3-quarter">
+        <div class="w3-container w3-blue w3-padding-16">
+          <div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3>{{antall}}</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Projecten</h4>
+        </div>
+      </div>
+      <div class="w3-quarter">
+        <div class="w3-container w3-teal w3-padding-16">
+          <div class="w3-left"><i class="fa fa-share-alt w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3>{{employeService.aantalShares}}</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Shares</h4>
+        </div>
+      </div>
+      <div class="w3-quarter">
+        <div class="w3-container w3-orange w3-text-white w3-padding-16">
+          <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3>{{aantalUsers}}</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Gebruikers</h4>
+        </div>
+      </div>
+
+    </div>
+    <div class="w3-container">
+      <h5>Algemene statistieken</h5>
+      <p>Ingevuld survey</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-center w3-padding w3-green" style="width:25%">25%</div>
+      </div>
+
+      <p>Nieuwe gebruikers</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-center w3-padding w3-orange" style="width:50%">50%</div>
+      </div>
+
+      <p>Niet compleet survey</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-center w3-padding w3-red" style="width:75%">75%</div>
+      </div>
+    </div>
+    <hr>
+    </div>
+</form>
+</body>

@@ -1,0 +1,11 @@
+<h1 style="text-align: center;">Results</h1>
+<p style="color: grey; text-align: center;">De 'Gezonde Groenwijzer' enquete is ingevuld en verzonden naar onze gegevensbank. <br/>Op de volgende pagina is nog wat informatie te vinden over de vragenlijst</p>
+<div class="d-flex justify-content-center">
+    <div class="d-inline-flex p-2 bd-highlight size">
+        <canvas baseChart [(datasets)]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType" [colors]="chartColors">
+      </canvas>
+    </div>
+</div>
+<div style="margin-top: 25px">
+    <button class="btn btn-primary" [routerLink]="['/thank-you']">Volgende</button>
+</div>

@@ -1,0 +1,41 @@
+.form-group row{
+  size: 200px;
+}
+.mat-button-toggle-checked{
+  bottom: 200px;
+  top: 300px;
+}
+.form-group{
+  bottom: 50px;
+  padding-bottom: 50px;
+  padding-top: 10px;
+  padding-left: 300px;
+
+}
+
+.qrCode{
+  text-align: left;
+}
+
+.titleQR{
+  color: #05a55a;
+  text-align: left;
+  letter-spacing: 3px;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.buttonQR {
+  padding: 5px;
+  background-color: #eb221d;
+  margin-top: 5px;
+  text-decoration: none;
+  color: white;
+  border: none;
+}
+
+.urlQR {
+  padding: 5px;
+  width: 28%;
+}
+

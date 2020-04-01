@@ -1,0 +1,54 @@
+<form>
+  <div *ngIf="!show" class="form-group " Width="20px" Hight="400px">
+    <label class="cdk-keyboard-focused">Project Naam</label>
+    <div class="cdk-keyboard-focused">
+      <input type="d" [(ngModel)]="projectnaam" name="first" class="form-control" id="inputEmail3">
+    </div>
+    <label class="cdk-keyboard-focused">Beschrijving</label>
+    <mat-form-field>
+      <textarea class="inputDescription" matInput cdkTextareaAutosize 
+      [(ngModel)]="beschrijving"
+        #autosize="cdkTextareaAutosize"
+        [formControl]="beschrijvingText" 
+        cdkAutosizeMinRows="1"
+        cdkAutosizeMaxRows="50"></textarea>
+        </mat-form-field>
+    <br>
+    <label class="cdk-keyboard-focused">Stadsdeel</label>
+    <div class="cdk-keyboard-focused">
+      <select [(ngModel)]="stadsdeel" class="form-control" id="country" name="country">
+        <option value="Centrum">Centrum</option>
+        <option value="Nieuw-West">Nieuw-West</option>
+        <option value="Noord">Noord</option>
+        <option value="Oost">Oost</option>
+        <option value="West">West</option>
+        <option value="Zuid">Zuid</option>
+        <option value="Zuid-Oost">Zuid-Oost</option>
+      </select>
+    </div>
+    <label class="cdk-keyboard-focused">Oppervlakte van project</label>
+    <div class="cdk-keyboard-focused">
+      <input [(ngModel)]="oppervlakte" type="d" name="second" class="form-control">
+    </div>
+    <label class="cdk-keyboard-focused">Begin datum</label>
+    <div class="cdk-keyboard-focused">
+      <mat-form-field>
+        <input matInput [matDatepicker]="beginPicker" placeholder="Choose a date" [formControl]="beginDate">
+        <mat-datepicker-toggle matSuffix [for]="beginPicker"></mat-datepicker-toggle>
+        <mat-datepicker #beginPicker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <label class="cdk-keyboard-focused">Eind datum</label>
+    <div class="cdk-keyboard-focused">
+      <mat-form-field>
+        <input matInput [matDatepicker]="endPicker" placeholder="Choose a date" [formControl]="endDate">
+        <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
+        <mat-datepicker #endPicker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="clearfix">
+      <button type="submit" class="signupbtn" (click)="add()">Project Toevoegen</button>
+      <button type="button" (click)="onCancel()" class="cancelbtn">Cancel</button>
+    </div>
+  </div>
+</form>

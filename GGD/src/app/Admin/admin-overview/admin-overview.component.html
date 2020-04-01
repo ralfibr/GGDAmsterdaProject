@@ -1,0 +1,88 @@
+<app-dashboard
+  *ngIf="!show&&!show2&&!showProjects&&!showAdmins&&!showEmployee&&!showResult&&!showQr&&isLogged()"></app-dashboard>
+<app-projects-overview *ngIf="showProjects&&isLogged()"></app-projects-overview>
+<app-alladmins-overview *ngIf="showAdmins&&isLogged()"></app-alladmins-overview>
+<app-invite-admin *ngIf="show2&&isLogged()"></app-invite-admin>
+<body class="mat-button-toggle-checked">
+<app-add-project *ngIf="show&&isLogged()"></app-add-project>
+<app-employee-overview *ngIf="showEmployee&&isLogged"></app-employee-overview>
+<app-result *ngIf="showResult&&isLogged()"></app-result>
+<app-qrcode *ngIf="showQr&&isLogged()"></app-qrcode>
+<app-not-logged *ngIf="!isLogged()"></app-not-logged>
+</body>
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Icons</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  .w3-sidebar a {
+    font-family: "Roboto", sans-serif
+  }
+
+  body, h1, h2, h3, h4, h5, h6, .w3-wide {
+    font-family: "Montserrat", sans-serif;
+  }
+</style>
+<body *ngIf="isLogged()" class="w3-content" style="max-width:1500px">
+
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+
+  <div *ngIf="isLogged()" class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <a *ngIf="isLogged()" class="navbar-brand" href="#">
+
+      <img *ngIf="isLogged()" src="assets/Img/ggd-logo-2.png" height="50px" alt="ggd">
+    </a>
+    <div *ngIf="isLogged()" class="navbar-nav1">
+      <div class="mat-dialog-title"><i class="glyphicon glyphicon-user"
+                                       style="font-size:17px;"></i> {{authService.getUserName()}}</div>
+      <div class="nav-link" routerLinkActive="active" routerLink="/admin" (click)="authService.signOff()"><h4>Sign
+        Out</h4></div>
+    </div>
+
+  </div>
+  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+    <div>
+
+      <a routerLink="#" (click)="toggleDashboard()" class="w3-bar-item w3-button"> Dashboard <i class="fa fa-home"></i></a>
+    </div>
+    <a routerLink="#" (click)="toggleProjects()" class="w3-bar-item w3-button">Projecten <i class="fa fa-bars"></i></a>
+    <a routerLink="#" class="w3-bar-item w3-button" (click)="toggleAdmins()">Admins <i class="glyphicon glyphicon-user"
+                                                                                       style="font-size:17px;"></i></a>
+    <a routerLink="#" class="w3-bar-item w3-button" (click)="toggleEmployee()">Employees <i class="fa fa-male"></i></a>
+    <a routerLink="#" class="w3-bar-item w3-button" (click)="toggleResult()">Resultaten <i
+      class="glyphicon glyphicon-file"></i></a>
+    <a routerLink="#" class="w3-bar-item w3-button" (click)="toggle1()">Employee uitnodigen <i class="material-icons"
+                                                                                               style="font-size:17px;">computer</i></a>
+    <a routerLink="#" class="w3-bar-item w3-button" (click)="toggle()"> Nieuw project <i class="fa fa-cloud"
+                                                                                         style="font-size:15px;"></i></a>
+    <a routerLink="#" class="w3-bar-item w3-button" (click)="toggleQr()"> Qr Code genereren <i class="fa fa-qrcode"
+                                                                                               style="font-size:15px;"></i></a>
+  </div>
+</nav>
+
+</body>

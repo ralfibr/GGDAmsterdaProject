@@ -1,0 +1,15 @@
+<div class="d-flex justify-content-center">
+    <img class="rounded" [src]="projectData.getProjectImage() " alt="Amsterdam" height="250px">
+
+    <p>Project {{projectData.selectedProject.code}}: {{projectData.selectedProject.name}}.
+        <br><br>{{projectData.selectedProject.description}}</p>
+</div>
+<form #formCode="ngForm" (keydown.enter)="$event.preventDefault()">
+
+    <div class="d-flex justify-content-center">
+
+        <!-- <button style="background-color: green" routerLink="/stepbystep" class="btn btn-primary">Hoe werkt het?</button> -->
+        <button style="background-color: green" routerLink="/survey" class="btn btn-primary">De Enquete</button>
+        <!-- <button style="background-color: green" routerLink="/faq" class="btn btn-primary">Veel Gestelde Vragen</button> -->
+    </div>
+</form>

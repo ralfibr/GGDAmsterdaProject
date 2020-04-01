@@ -1,0 +1,17 @@
+<form>
+  <nav id="navbar">
+  </nav>
+  <h1 class="imgcontainer" id="title">GGD GROENWIJZER ADMIN PANEL</h1>
+<div class="container">
+  <label ><b>Username</b></label>
+  <input class="container"  ngModel="username"  [(ngModel)]="user.email" id="username" type="text" placeholder="Enter Username" name="uname" required>
+  <label><b>Password</b></label>
+  <input id="password" ngModel="paswword" [(ngModel)]="user.password" type="password" placeholder="Enter Password" name="psw" required>
+  <p>{{errorMessage}}</p>
+  <button class="logIn" id="login" (click)="authenticate()">Login</button>
+  <button class="signup" id="signup" (click)="signUp()">signUp</button>
+  <label>
+    <input type="checkbox" checked="checked" name="remember"> Remember me
+  </label>
+</div>
+</form>
